@@ -1,7 +1,5 @@
 package com.csys.medicaloffice;
 
-import com.csys.medicaloffice.dao.AppointmentRepository;
-import com.csys.medicaloffice.dao.OrdersRepository;
 import com.csys.medicaloffice.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -21,16 +19,14 @@ public class MedicalofficeApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repositoryRestConfiguration.exposeIdsFor(Appointment.class);
-        repositoryRestConfiguration.exposeIdsFor(Orders.class);
         repositoryRestConfiguration.exposeIdsFor(Confer.class);
         repositoryRestConfiguration.exposeIdsFor(HospitalisationLettre.class);
         repositoryRestConfiguration.exposeIdsFor(LetterToConfer.class);
         repositoryRestConfiguration.exposeIdsFor(MedicalCertificate.class);
-        repositoryRestConfiguration.exposeIdsFor(Medicines.class);
+        repositoryRestConfiguration.exposeIdsFor(Medicament.class);
         repositoryRestConfiguration.exposeIdsFor(Patient.class);
         repositoryRestConfiguration.exposeIdsFor(PolyclinicHospital.class);
-        repositoryRestConfiguration.exposeIdsFor(SocialSecurity.class);
-        repositoryRestConfiguration.exposeIdsFor(SocialSecurityAffiliation.class);
+        repositoryRestConfiguration.exposeIdsFor(Ordonnances.class);
 
 
 

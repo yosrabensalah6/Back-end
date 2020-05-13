@@ -19,7 +19,7 @@ public class LetterToConfer implements Serializable {
     private String Object;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Consultation Consultation;
+    private com.csys.medicaloffice.entities.Consultation Consultation;
 
     @ManyToOne
     private Confer confer;

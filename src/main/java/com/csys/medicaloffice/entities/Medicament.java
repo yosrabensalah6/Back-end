@@ -1,28 +1,25 @@
 package com.csys.medicaloffice.entities;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.io.Serializable;
-import java.util.Collection;
+
 @Data
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
-
-public class Medicines implements Serializable {
+@NoArgsConstructor
+@ToString
+public class Medicament {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String nom;
     private String type;
     private String description;
-
-
 }

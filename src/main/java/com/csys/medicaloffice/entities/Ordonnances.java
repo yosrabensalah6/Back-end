@@ -1,5 +1,6 @@
 package com.csys.medicaloffice.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,16 +12,15 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Orders implements Serializable {
+public class Ordonnances implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date date;
-    private int dosage;
-    private Date period;
-    private int numbertaken;
-
+     @OneToOne
+     private Patient patient;
     @ManyToOne
-    private Medicines Medicines;
+    private Medicament medicament;
 
 }

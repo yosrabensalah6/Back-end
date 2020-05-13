@@ -27,4 +27,5 @@ public class Patient extends Person implements Serializable {
     private Date validationday;
     private Long codeAPCI;
 
+
 }

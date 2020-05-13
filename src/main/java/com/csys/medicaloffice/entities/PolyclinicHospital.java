@@ -22,5 +22,6 @@ public class PolyclinicHospital implements Serializable {
     private String adress;
     @OneToMany(mappedBy = "polyclinicHospitals")
     private Collection<HospitalisationLettre> hospitalisationLettre;
-
+    @OneToOne
+    private Patient patient;
 }

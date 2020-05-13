@@ -1,6 +1,5 @@
 package com.csys.medicaloffice.entities;
 
-import javafx.print.Collation;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
