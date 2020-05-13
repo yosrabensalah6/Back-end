@@ -16,13 +16,15 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class Patient extends Person implements Serializable {
-
-    private Number  DateOfCreation;
-    private Number DateOfBirth;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date  creationday;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date birthday;
     private  String sexe;
     private  Long numMatCNAM;
     private String typeCNAM;
-    private Number DateValCNAM;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date validationday;
     private Long codeAPCI;
 
 }

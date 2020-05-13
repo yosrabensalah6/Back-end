@@ -20,7 +20,7 @@ public class Appointment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-   @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+   @JsonFormat(pattern="yyyy-MM-dd HH:mm")
     private Date date;
     private String firstname;
     private String lastname;
