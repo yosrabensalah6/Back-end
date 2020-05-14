@@ -26,8 +26,8 @@ public class MedicalofficeApplication implements CommandLineRunner {
         repositoryRestConfiguration.exposeIdsFor(Medicament.class);
         repositoryRestConfiguration.exposeIdsFor(Patient.class);
         repositoryRestConfiguration.exposeIdsFor(PolyclinicHospital.class);
-        repositoryRestConfiguration.exposeIdsFor(Ordonnances.class);
-
+        repositoryRestConfiguration.exposeIdsFor(Ordonnance.class);
+        repositoryRestConfiguration.exposeIdsFor(LigneOrdonnance.class);
 
 
     }

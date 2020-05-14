@@ -6,21 +6,20 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Medicament {
+public class LigneOrdonnance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nom;
-    private String type;
-    private String description;
-
-    @OneToMany(mappedBy = "medicament")
-    private Collection<LigneOrdonnance> ligneOrdonnance;
+    private Number dosage;
+    private Number nbprise;
+    @ManyToOne
+    private Ordonnance ordonnance;
+    @ManyToOne
+    private  Medicament medicament;
 }

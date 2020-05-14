@@ -13,14 +13,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Ordonnances implements Serializable {
+public class Ordonnance implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date date;
-    @OneToMany(mappedBy = "ordonnance")
-    private Collection<Medicament> medicament;
     @ManyToOne
     private Patient patient;
+    @OneToMany(mappedBy = "ordonnance")
+    private Collection<LigneOrdonnance> ligneOrdonnance;
 }
