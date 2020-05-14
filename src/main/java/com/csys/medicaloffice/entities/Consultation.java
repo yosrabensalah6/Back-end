@@ -20,21 +20,13 @@ public class Consultation implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @JsonFormat(pattern="yyyy-MM-dd")
-    private Date consultationday ;
+    private Date dateinsert ;
     private String motif;
     private float temperature;
     private float bloodpressure;
     private float weight;
     @ManyToOne
     private Patient patient;
-
-//    @ManyToOne
-//    private LetterToConfer lettreToConfer;
-//    @OneToOne(mappedBy = "consultation")
-//    private MedicalCertificate medicalCertificate;
-//    @OneToOne(mappedBy = "consultation")
-//    private  HospitalisationLettre hospitalisationLettre;
-
 
 
 }

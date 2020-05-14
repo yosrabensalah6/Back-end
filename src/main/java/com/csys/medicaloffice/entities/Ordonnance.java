@@ -18,9 +18,9 @@ public class Ordonnance implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @JsonFormat(pattern="yyyy-MM-dd")
-    private Date date;
+    private Date dateinsert;
     @ManyToOne
     private Patient patient;
     @OneToMany(mappedBy = "ordonnance")
-    private Collection<LigneOrdonnance> ligneOrdonnance;
+    private Collection<LigneOrdonnance> ligneOrdonnances;
 }

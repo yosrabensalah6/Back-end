@@ -22,5 +22,5 @@ public class Medicament {
     private String description;
 
     @OneToMany(mappedBy = "medicament")
-    private Collection<LigneOrdonnance> ligneOrdonnance;
+    private Collection<LigneOrdonnance> ligneOrdonnances;
 }

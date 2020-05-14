@@ -19,9 +19,8 @@ public class PolyclinicHospital implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String adress;
-    @OneToMany(mappedBy = "polyclinicHospitals")
-    private Collection<HospitalisationLettre> hospitalisationLettre;
-    @OneToOne
-    private Patient patient;
+    private String adresse;
+   @OneToMany(mappedBy = "polyclinicHospital")
+    private Collection<HospitalisationLettre> hospitalisationLettres;
+
 }

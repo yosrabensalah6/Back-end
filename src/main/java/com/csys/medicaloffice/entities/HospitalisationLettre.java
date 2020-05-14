@@ -18,11 +18,10 @@ public class HospitalisationLettre implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date dateStartHospi;
-    @ManyToOne(optional = false)
-    private PolyclinicHospital polyclinicHospitals;
-    @OneToOne
-    private Consultation consultation;
-
+    private Date dateInsert;
+   @ManyToOne
+    private Patient patient;
+   @ManyToOne
+    private PolyclinicHospital polyclinicHospital;
 
 }

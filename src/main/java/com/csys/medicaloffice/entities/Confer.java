@@ -16,7 +16,7 @@ import java.util.Collection;
 @ToString
 public class Confer extends Person implements Serializable {
     private String adresse;
-    private String speciality;
+    private String specialite;
     @OneToMany(mappedBy = "confer")
-    private Collection<LetterToConfer> letterToConfer;
+    private Collection<LetterToConfer> letterToConfers;
 }

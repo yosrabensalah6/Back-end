@@ -34,6 +34,9 @@ public class Patient extends Person implements Serializable {
     private Collection<MedicalCertificate> medicalCertificates;
     @OneToMany(mappedBy = "patient")
     private Collection<Ordonnance> ordonnances;
-
+    @OneToMany(mappedBy = "patient")
+   private  Collection<LetterToConfer> letterToConfers;
+    @OneToMany(mappedBy = "patient")
+    private  Collection<HospitalisationLettre> hospitalisationLettres;
 
 }
