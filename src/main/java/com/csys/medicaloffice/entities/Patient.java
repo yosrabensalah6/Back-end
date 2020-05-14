@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 @Data
@@ -26,6 +29,12 @@ public class Patient extends Person implements Serializable {
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date validationday;
     private Long codeAPCI;
+    @OneToMany(mappedBy = "patient")
+    private Collection<Consultation> Consultations;
+    @OneToMany(mappedBy = "patient")
+    private Collection<MedicalCertificate> medicalCertificates;
+    @OneToMany(mappedBy = "patient")
+    private Collection<Ordonnances> ordonnances;
 
 
 }

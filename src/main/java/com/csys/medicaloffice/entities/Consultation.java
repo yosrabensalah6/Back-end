@@ -22,9 +22,9 @@ public class Consultation implements Serializable {
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date consultationday ;
     private String motif;
-    private Number temperature;
-    private Number bloodpressure;
-    private Number weight;
+    private float temperature;
+    private float bloodpressure;
+    private float weight;
     @ManyToOne
     private Patient patient;
 

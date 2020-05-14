@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 @Data
@@ -18,9 +19,8 @@ public class Ordonnances implements Serializable {
     private Long id;
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date date;
-     @OneToOne
-     private Patient patient;
+    @OneToMany(mappedBy = "ordonnance")
+    private Collection<Medicament> medicament;
     @ManyToOne
-    private Medicament medicament;
-
+    private Patient patient;
 }
