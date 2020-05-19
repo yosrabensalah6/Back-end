@@ -18,8 +18,7 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class Patient extends Person implements Serializable {
-    @JsonFormat(pattern="yyyy-MM-dd")
-    private Date  creationday;
+
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date birthday;
     private  String sexe;
@@ -31,12 +30,13 @@ public class Patient extends Person implements Serializable {
     @OneToMany(mappedBy = "patient")
     private Collection<Consultation> Consultations;
     @OneToMany(mappedBy = "patient")
-    private Collection<MedicalCertificate> medicalCertificates;
+    private Collection<MedicalCertificate> MedicalCertificates;
     @OneToMany(mappedBy = "patient")
-    private Collection<Ordonnance> ordonnances;
+    private Collection<Ordonnance> Ordonnances;
     @OneToMany(mappedBy = "patient")
-   private  Collection<LetterToConfer> letterToConfers;
+   private  Collection<LetterToConfer> LetterToConfers;
     @OneToMany(mappedBy = "patient")
-    private  Collection<HospitalisationLettre> hospitalisationLettres;
+    private  Collection<HospitalisationLettre> HospitalisationLettres;
+
 
 }

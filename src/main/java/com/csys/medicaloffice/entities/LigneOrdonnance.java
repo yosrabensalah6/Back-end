@@ -22,4 +22,5 @@ public class LigneOrdonnance {
     private Ordonnance ordonnance;
     @ManyToOne
     private  Medicament medicament;
+
 }

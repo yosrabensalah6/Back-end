@@ -1,5 +1,6 @@
 package com.csys.medicaloffice.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,9 @@ public class HospitalisationLettre implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateInsert;
+    private  String objet;
    @ManyToOne
     private Patient patient;
    @ManyToOne

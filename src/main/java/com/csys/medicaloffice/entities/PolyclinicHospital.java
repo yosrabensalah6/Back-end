@@ -1,5 +1,6 @@
 package com.csys.medicaloffice.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Data
@@ -20,7 +22,10 @@ public class PolyclinicHospital implements Serializable {
     private Long id;
     private String name;
     private String adresse;
-   @OneToMany(mappedBy = "polyclinicHospital")
-    private Collection<HospitalisationLettre> hospitalisationLettres;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date dateInsert;
+
+    @OneToMany(mappedBy = "polyclinicHospital")
+    private Collection<HospitalisationLettre> HospitalisationLettres;
 
 }
