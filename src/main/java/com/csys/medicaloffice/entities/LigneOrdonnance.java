@@ -16,11 +16,12 @@ public class LigneOrdonnance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Number dosage;
-    private Number nbprise;
+    private float dosage;
+    private int nbprise;
+    private String periode;
     @ManyToOne
     private Ordonnance Ordonnance;
     @ManyToOne
-    private  Medicament Medicament;
+    private Medicament Medicament;
 
 }

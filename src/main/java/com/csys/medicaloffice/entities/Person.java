@@ -24,7 +24,7 @@ public class Person implements Serializable {
     private String firstname;
     private String lastname;
     private String telephone;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
 
 }

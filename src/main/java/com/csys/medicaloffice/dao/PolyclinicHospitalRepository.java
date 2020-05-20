@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface PolyclinicHospitalRepository extends JpaRepository<PolyclinicHospital,Long> {
-    @RestResource(path="/byDateInsertPage")
-    @Query( "Select P from PolyclinicHospital P ORDER BY P.dateInsert desc ")
-    public Page<PolyclinicHospital> findPolyclinicHospitals(Pageable pageable);
+public interface PolyclinicHospitalRepository extends JpaRepository<PolyclinicHospital, Long> {
+
+    @RestResource(path = "/byDateInsertPage")
+    @Query("Select P from PolyclinicHospital P ORDER BY P.dateInsert desc ")
+    Page<PolyclinicHospital> findPolyclinicHospitals(Pageable pageable);
 }

@@ -19,14 +19,13 @@ public class MedicalCertificate implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
-    @JsonFormat(pattern="yyyy-MM-dd")
-    private Date datedebut;
-    @JsonFormat(pattern="yyyy-MM-dd")
-    private Date datefin;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date dateDebut;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date dateFin;
     private String description;
-
     @ManyToOne
     private Patient patient;
 

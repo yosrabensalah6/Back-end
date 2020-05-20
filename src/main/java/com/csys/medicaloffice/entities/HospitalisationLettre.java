@@ -19,12 +19,12 @@ public class HospitalisationLettre implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
-    private  String objet;
-   @ManyToOne
+    private String objet;
+    @ManyToOne
     private Patient patient;
-   @ManyToOne
+    @ManyToOne
     private PolyclinicHospital polyclinicHospital;
 
 }

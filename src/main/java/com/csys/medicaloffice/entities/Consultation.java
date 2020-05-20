@@ -19,8 +19,8 @@ public class Consultation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonFormat(pattern="yyyy-MM-dd")
-    private Date dateInsert ;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date dateInsert;
     private String motif;
     private float temperature;
     private float bloodpressure;

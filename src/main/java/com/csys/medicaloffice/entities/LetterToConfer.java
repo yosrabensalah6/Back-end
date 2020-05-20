@@ -20,7 +20,7 @@ public class LetterToConfer implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String objet;
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
     private String description;
     @ManyToOne

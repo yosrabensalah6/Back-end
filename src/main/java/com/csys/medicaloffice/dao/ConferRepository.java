@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface ConferRepository extends JpaRepository<Confer,Long> {
+public interface ConferRepository extends JpaRepository<Confer, Long> {
 
-    @RestResource(path="/byDateInsertPage")
-    @Query( "Select C from Confer C ORDER BY C.dateInsert desc ")
-    public Page<Confer> findConfers(Pageable pageable);
+    @RestResource(path = "/byDateInsertPage")
+    @Query("Select C from Confer C ORDER BY C.dateInsert desc ")
+    Page<Confer> findConfers(Pageable pageable);
 }

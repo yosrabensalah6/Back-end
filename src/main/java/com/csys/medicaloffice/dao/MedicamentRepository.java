@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface MedicamentRepository extends JpaRepository<Medicament,Long> {
-    @RestResource(path="/byDateInsertPage")
-    @Query( "Select M from Medicament M ORDER BY M.dateInsert desc ")
-    public Page<Medicament> findMedicaments(Pageable pageable);
+public interface MedicamentRepository extends JpaRepository<Medicament, Long> {
+
+    @RestResource(path = "/byDateInsertPage")
+    @Query("Select M from Medicament M ORDER BY M.dateInsert desc ")
+    Page<Medicament> findMedicaments(Pageable pageable);
 }

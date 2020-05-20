@@ -19,12 +19,12 @@ import java.util.Date;
 @ToString
 public class Patient extends Person implements Serializable {
 
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
-    private  String sexe;
-    private  Long numMatCNAM;
+    private String sexe;
+    private Long numMatCNAM;
     private String typeCNAM;
-    @JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date validationday;
     private Long codeAPCI;
     @OneToMany(mappedBy = "patient")
@@ -34,9 +34,9 @@ public class Patient extends Person implements Serializable {
     @OneToMany(mappedBy = "patient")
     private Collection<Ordonnance> Ordonnances;
     @OneToMany(mappedBy = "patient")
-   private  Collection<LetterToConfer> LetterToConfers;
+    private Collection<LetterToConfer> LetterToConfers;
     @OneToMany(mappedBy = "patient")
-    private  Collection<HospitalisationLettre> HospitalisationLettres;
+    private Collection<HospitalisationLettre> HospitalisationLettres;
 
 
 }

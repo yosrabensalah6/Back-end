@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface OrdonnanceRepository extends JpaRepository<Ordonnance,Long> {
+public interface OrdonnanceRepository extends JpaRepository<Ordonnance, Long> {
 }

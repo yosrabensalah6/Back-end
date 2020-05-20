@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface LetterToConferRepository extends JpaRepository<LetterToConfer,Long> {
+public interface LetterToConferRepository extends JpaRepository<LetterToConfer, Long> {
 }

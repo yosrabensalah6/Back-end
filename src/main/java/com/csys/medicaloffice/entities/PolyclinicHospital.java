@@ -22,6 +22,7 @@ public class PolyclinicHospital implements Serializable {
     private Long id;
     private String name;
     private String adresse;
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
 

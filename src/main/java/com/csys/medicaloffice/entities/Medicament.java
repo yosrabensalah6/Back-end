@@ -22,7 +22,7 @@ public class Medicament {
     private String nom;
     private String type;
     private String description;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
 
     @OneToMany(mappedBy = "Medicament")
