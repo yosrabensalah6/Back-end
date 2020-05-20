@@ -25,6 +25,6 @@ public class Medicament {
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
 
-    @OneToMany(mappedBy = "medicament")
-    private Collection<LigneOrdonnance> LigneOrdonnances;
+    @OneToMany(mappedBy = "Medicament")
+    private Collection<LigneOrdonnance> ligneOrdonnances;
 }

@@ -21,6 +21,6 @@ public class Ordonnance implements Serializable {
     private Date dateInsert;
     @ManyToOne
     private Patient patient;
-    @OneToMany(mappedBy = "ordonnance")
-    private Collection<LigneOrdonnance> LigneOrdonnances;
+    @OneToMany(mappedBy = "Ordonnance")
+    private Collection<LigneOrdonnance> ligneOrdonnances;
 }

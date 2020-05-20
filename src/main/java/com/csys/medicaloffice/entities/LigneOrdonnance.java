@@ -19,8 +19,8 @@ public class LigneOrdonnance {
     private Number dosage;
     private Number nbprise;
     @ManyToOne
-    private Ordonnance ordonnance;
+    private Ordonnance Ordonnance;
     @ManyToOne
-    private  Medicament medicament;
+    private  Medicament Medicament;
 
 }
