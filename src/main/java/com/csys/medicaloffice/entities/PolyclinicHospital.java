@@ -26,7 +26,7 @@ public class PolyclinicHospital implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateInsert;
 
-    @OneToMany(mappedBy = "polyclinicHospital")
-    private Collection<HospitalisationLettre> HospitalisationLettres;
+    @OneToMany(mappedBy = "PolyclinicHospital")
+    private Collection<HospitalisationLettre> hospitalisationLettres;
 
 }

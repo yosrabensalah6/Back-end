@@ -26,7 +26,7 @@ public class LetterToConfer implements Serializable {
     @ManyToOne
     private Patient patient;
     @ManyToOne
-    private Confer confer;
+    private Confer Confer;
 
 
 }

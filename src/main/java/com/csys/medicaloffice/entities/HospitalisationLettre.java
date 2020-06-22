@@ -25,6 +25,6 @@ public class HospitalisationLettre implements Serializable {
     @ManyToOne
     private Patient patient;
     @ManyToOne
-    private PolyclinicHospital polyclinicHospital;
+    private PolyclinicHospital PolyclinicHospital;
 
 }
